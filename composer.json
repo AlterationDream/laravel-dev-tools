@@ -1,5 +1,5 @@
 {
-    "name": "Mythi/laravel-dev-tools",
+    "name": "mythi/laravel-dev-tools",
     "description": "Shortcuts to speed up routine development.",
     "autoload": {
         "psr-4": {
@@ -12,6 +12,5 @@
             "email": "valery.tarakanovskiy@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {}
 }
