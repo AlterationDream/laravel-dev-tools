@@ -1,8 +1,8 @@
 <?php
 namespace Mythi\LaravelDevTools;
 
-use AlterationDream\LaravelDevTools\Commands\MakeAPIControllerCommand;
-use AlterationDream\LaravelDevTools\Commands\MakeRequestsCommand;
+use Mythi\LaravelDevTools\Commands\MakeAPIControllerCommand;
+use Mythi\LaravelDevTools\Commands\MakeRequestsCommand;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelDevToolsServiceProvider extends ServiceProvider
