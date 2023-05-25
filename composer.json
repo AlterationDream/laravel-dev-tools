@@ -1,5 +1,5 @@
 {
-    "name": "AlterationDream/laravel-dev-tools",
+    "name": "Mythi/laravel-dev-tools",
     "description": "Shortcuts to speed up routine development.",
     "autoload": {
         "psr-4": {
