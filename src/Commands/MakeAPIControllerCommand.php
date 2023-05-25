@@ -1,10 +1,10 @@
 <?php
 
-namespace AlterationDream\LaravelDevTools\Commands;
+namespace Mythi\LaravelDevTools\Commands;
 
 use Illuminate\Console\Concerns\CreatesMatchingTest;
 use Illuminate\Console\GeneratorCommand;
-use AlterationDream\LaravelDevTools\LaravelDevToolsServiceProvider as Provider;
+use Mythi\LaravelDevTools\LaravelDevToolsServiceProvider as Provider;
 
 class MakeAPIControllerCommand extends GeneratorCommand
 {
