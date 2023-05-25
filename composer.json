@@ -4,12 +4,7 @@
     "autoload": {
         "psr-4": {
             "Mythi\\LaravelDevTools\\": "src/"
-        },
-        "files": [
-            "src/stubs/api-controller.stub",
-            "src/stubs/BaseAPIController.stub",
-            "src/stubs/requests.stub"
-        ]
+        }
     },
     "authors": [
         {
