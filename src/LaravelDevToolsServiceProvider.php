@@ -1,5 +1,5 @@
 <?php
-namespace AlterationDream\LaravelDevTools;
+namespace Mythi\LaravelDevTools;
 
 use AlterationDream\LaravelDevTools\Commands\MakeAPIControllerCommand;
 use AlterationDream\LaravelDevTools\Commands\MakeRequestsCommand;
