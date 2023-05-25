@@ -1,0 +1,3 @@
+app.php:
+providers
+\AlterationDream\LaravelDevTools\LaravelDevToolsServiceProvider::class

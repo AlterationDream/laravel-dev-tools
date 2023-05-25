@@ -4,6 +4,7 @@ namespace AlterationDream\LaravelDevTools\Commands;
 
 use Illuminate\Console\Concerns\CreatesMatchingTest;
 use Illuminate\Console\GeneratorCommand;
+use AlterationDream\LaravelDevTools\LaravelDevToolsServiceProvider as Provider;
 
 class MakeAPIControllerCommand extends GeneratorCommand
 {
@@ -30,18 +31,19 @@ class MakeAPIControllerCommand extends GeneratorCommand
 
     protected function getStub(): string
     {
-        return $this->resolveStubPath('/stubs/api-controller.stub');
+        return $this->resolveStubPath('stubs/api-controller.stub');
     }
 
     protected function getBaseStub(): string
     {
-        return $this->resolveStubPath('/stubs/BaseAPIController.stub');
+        return $this->resolveStubPath('stubs/BaseAPIController.stub');
     }
 
     protected function resolveStubPath($stub): string
     {
-        var_dump(__DIR__.$stub);
-        return file_exists( dirname(__FILE__).$stub);
+        return file_exists($customPath = $this->laravel->basePath(Provider::$rootPath.$stub))
+            ? $customPath
+            : __DIR__.$stub;
     }
 
     protected function buildClass($name): string
@@ -98,7 +100,6 @@ class MakeAPIControllerCommand extends GeneratorCommand
         }
 
         $name = $this->qualifyClass($this->getClassName());
-
         $path = $this->getPath($name);
         $this->makeDirectory($path);
 
