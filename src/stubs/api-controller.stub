@@ -1,0 +1,55 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\{{ name }};
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use App\Http\Requests\{{ name }}\{{ name }}IndexRequest as Index;
+use App\Http\Requests\{{ name }}\{{ name }}ShowRequest as Show;
+use App\Http\Requests\{{ name }}\{{ name }}StoreRequest as Store;
+use App\Http\Requests\{{ name }}\{{ name }}UpdateRequest as Update;
+use App\Http\Requests\{{ name }}\{{ name }}DestroyRequest as Destroy;
+
+class {{ name }}Controller extends {{ extends }}
+{
+    public function index(Index $request): AnonymousResourceCollection
+    {
+        $items = {{ name }}::all();
+        return JsonResource::collection($items);
+    }
+
+    public function show(Show $request): JsonResource
+    {
+        $item = {{ name }}::find($request->id);
+        return new JsonResource($item);
+    }
+
+    public function store(Store $request): JsonResponse
+    {
+        $item = {{ name }}::create([
+            '' => $request->,
+        ]);
+
+        return $this->sendDataResponse($item, '');    // TODO: fill messages
+    }
+
+    public function update(Update $request): JsonResponse
+    {
+        $item = {{ name }}::find($request->id);
+        $item->update([
+            '' => $request->,
+        ]);
+
+        return $this->sendDataResponse($item, '');
+    }
+
+    public function destroy(Destroy $request): JsonResponse
+    {
+        $item = {{ name }}::find($request->id);
+        $item->delete();
+
+        return $this->sendSuccessResponse('');
+    }
+}

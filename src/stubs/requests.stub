@@ -1,0 +1,64 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ extendsUse }};
+
+class {{ class }} extends {{ extends }}
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     */
+    public function authorize(): bool
+    {
+        return false;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    /*
+     * Добавить параметр роута к параметрам запроса.
+     *
+     * @param null $keys
+     * @return array
+     *
+    public function all($keys = null): array
+    {
+        $request = parent::all($keys);
+        $request['id'] = $this->route('id');
+        return $request;
+    }
+    */
+    /*
+    public function messages(): array
+    {
+        return [
+            '' => '',
+        ];
+    }
+    */
+
+    /*
+    protected function failedAuthorization()
+        {
+            throw new HttpResponseException(response()->json([], Response::HTTP_UNAUTHORIZED));
+        }
+    */
+
+    /*
+    public function failedValidation(Validator $validator)
+        {
+            throw new HttpResponseException(response()->json([]));
+        }
+    */
+}

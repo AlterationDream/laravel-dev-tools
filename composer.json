@@ -1,0 +1,17 @@
+{
+    "name": "mythi/laravel-dev-tools",
+    "description": "Shortcuts to speed up routine development.",
+    "autoload": {
+        "psr-4": {
+            "Mythi\\LaravelDevTools\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Валерий",
+            "email": "valery.tarakanovskiy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
