@@ -1,8 +1,8 @@
 <?php
 
-namespace AlterationDream\LaravelDevTools\Commands;
+namespace Mythi\LaravelDevTools\Commands;
 
-use AlterationDream\LaravelDevTools\LaravelDevToolsServiceProvider as Provider;
+use Mythi\LaravelDevTools\LaravelDevToolsServiceProvider as Provider;
 use Illuminate\Console\Concerns\CreatesMatchingTest;
 use Illuminate\Console\GeneratorCommand;
 
